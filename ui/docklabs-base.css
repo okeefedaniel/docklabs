@@ -1,0 +1,251 @@
+/* ============================================================
+   DockLabs — Shared Base Styles
+   Design tokens, button patterns, layout utilities.
+   Used by: Harbor, Beacon, SignStreamer
+   ============================================================ */
+
+/* -- CT Brand Design Tokens -- */
+:root {
+    --ct-blue: #1F64E5;
+    --ct-dark-blue: #00214D;
+    --ct-bold-blue: #003D9C;
+    --ct-light-blue: #C6D4FB;
+    --ct-pale-blue: #EBF0FF;
+    --ct-orange: #F27124;
+    --ct-yellow: #FAAA19;
+    --ct-brown: #BA5803;
+    --ct-red: #E91C1F;
+    --ct-green: #198754;
+    --ct-dark-gray: #333333;
+    --ct-light-gray: #F8F8F8;
+}
+
+/* -- Accent Bar (top of page) -- */
+.ct-accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg,
+        var(--ct-blue) 0%,
+        var(--ct-bold-blue) 30%,
+        var(--ct-orange) 70%,
+        var(--ct-yellow) 100%
+    );
+}
+
+/* -- Bootstrap Primary Overrides -- */
+.bg-primary { background-color: var(--ct-dark-blue) !important; }
+.text-primary { color: var(--ct-blue) !important; }
+a { color: var(--ct-blue); }
+a:hover { color: var(--ct-bold-blue); }
+
+/* -- Button Base (DockLabs standard) -- */
+.btn {
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.15s ease;
+    position: relative;
+}
+.btn:active:not(:disabled) {
+    transform: scale(0.97);
+}
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.625rem 1.5rem;
+}
+.btn:disabled,
+.btn.btn-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+.btn-loading .spinner-border {
+    vertical-align: -0.125em;
+}
+
+/* -- Button Variants -- */
+.btn-primary {
+    background-color: var(--ct-blue);
+    border-color: var(--ct-blue);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--ct-bold-blue);
+    border-color: var(--ct-bold-blue);
+}
+.btn-outline-primary {
+    color: var(--ct-blue);
+    border-color: var(--ct-blue);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--ct-blue);
+    border-color: var(--ct-blue);
+    color: #fff;
+}
+
+/* -- WCAG AA Focus Styles -- */
+*:focus-visible {
+    outline: 3px solid var(--ct-orange) !important;
+    outline-offset: 2px;
+}
+.btn:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(242, 113, 36, 0.5) !important;
+}
+
+/* -- Typography (CT Brand) -- */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--ct-dark-blue);
+    font-weight: 600;
+}
+
+/* -- Navbar -- */
+.navbar {
+    background-color: var(--ct-dark-blue) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+.navbar .nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: opacity 0.15s;
+}
+.navbar .nav-link:hover { opacity: 0.85; }
+.navbar .dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-radius: 0.5rem;
+}
+.navbar .dropdown-item:hover {
+    background-color: var(--ct-pale-blue);
+    color: var(--ct-dark-blue);
+}
+
+/* -- Cards -- */
+.card {
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 0.625rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-weight: 600;
+    font-family: 'Poppins', Arial, sans-serif;
+    padding: 0.875rem 1.25rem;
+}
+
+/* -- Footer (dark, 3-column) -- */
+.footer-dark {
+    background-color: var(--ct-dark-blue);
+    color: rgba(255,255,255,0.65);
+}
+.footer-dark h6 { color: #fff; }
+.footer-dark a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+}
+.footer-dark a:hover {
+    color: #fff;
+}
+
+/* -- Status Badges -- */
+.badge {
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+    border-radius: 0.375rem;
+    color: #fff;
+}
+.badge-draft { background-color: #6C757D; }
+.badge-submitted,
+.badge-posted,
+.badge-completed { background-color: var(--ct-blue); }
+.badge-under-review,
+.badge-under_review,
+.badge-on-hold,
+.badge-forecasted { background-color: var(--ct-yellow); color: var(--ct-dark-gray); }
+.badge-approved,
+.badge-accepted,
+.badge-active { background-color: var(--ct-green); }
+.badge-denied,
+.badge-cancelled,
+.badge-declined { background-color: var(--ct-red); }
+.badge-pending { background-color: var(--ct-orange); }
+.badge-archived,
+.badge-closed { background-color: #6C757D; }
+
+/* -- Forms -- */
+.form-control:focus {
+    border-color: var(--ct-blue);
+    box-shadow: 0 0 0 0.2rem rgba(31, 100, 229, 0.15);
+}
+.form-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--ct-dark-blue);
+}
+.form-label.required::after {
+    content: ' *';
+    color: var(--ct-red);
+}
+
+/* -- Tables -- */
+.table thead th {
+    background-color: var(--ct-light-gray);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: var(--ct-dark-gray);
+    border-bottom: 2px solid rgba(0,0,0,0.08);
+}
+
+/* -- Empty States -- */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+}
+.empty-state i {
+    font-size: 3rem;
+    opacity: 0.4;
+    margin-bottom: 1rem;
+}
+
+/* -- Hero Section -- */
+.hero-section {
+    background: linear-gradient(135deg,
+        var(--ct-dark-blue) 0%,
+        var(--ct-bold-blue) 50%,
+        var(--ct-blue) 100%
+    );
+    color: #fff;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+/* -- Print Styles -- */
+@media print {
+    .navbar, .ct-accent-bar, footer, .btn,
+    .no-print { display: none !important; }
+    body { font-size: 12pt; color: #000; }
+    a { color: #000; text-decoration: underline; }
+    .card { border: 1px solid #ccc; box-shadow: none; }
+}
