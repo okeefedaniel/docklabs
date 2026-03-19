@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docklabs-keel"
+version = "0.1.0"
+description = "Keel — shared platform layer for DockLabs products"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Proprietary"}
+authors = [
+    {name = "Daniel O'Keefe"},
+]
+dependencies = [
+    "Django>=5.2",
+    "django-allauth>=65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-django",
+]
+
+[tool.setuptools.packages.find]
+include = ["keel*"]
