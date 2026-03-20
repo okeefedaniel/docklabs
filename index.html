@@ -146,6 +146,8 @@
     .product-icon.beacon svg { color: #3d8b37; }
     .product-icon.manifest { background: #f3eef8; }
     .product-icon.manifest svg { color: #7b3fa0; }
+    .product-icon.bounty { background: #e8f8e8; }
+    .product-icon.bounty svg { color: #2a7a2a; }
     .product-icon.lookout { background: #fff4e6; }
     .product-icon.lookout svg { color: #c47a0a; }
     .product-icon.admiralty { background: #e6f0f8; }
@@ -306,7 +308,7 @@
       <h1>Software for government that actually works.</h1>
       <p>DockLabs builds modular, production-grade tools for state economic development agencies. Purpose-built for the public sector &mdash; FOIA-aware, compliance-first, and designed to replace the spreadsheets.</p>
       <p class="subtitle">Built by Daniel O'Keefe &middot; <a href="https://dokeefect.com">dokeefect.com</a></p>
-      <p class="stats-line" id="stats-line">0 projects. 0 files. 0+ lines of code. And still building.</p>
+      <p class="stats-line" id="stats-line">6 projects. 972 files. 104,000+ lines of code. And still building.</p>
       <div class="disclaimer">DockLabs is a personal passion project. No state resources, equipment, or work time are used in its development. See <a href="https://dokeefect.com/disclaimer/">full disclaimer</a>.</div>
     </div>
 
@@ -402,6 +404,39 @@
         </div>
 
         <div class="product-card">
+          <div class="product-icon bounty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+              <path d="M2 12h4M18 12h4"/>
+            </svg>
+          </div>
+          <div class="tagline">Federal Funds Discovery</div>
+          <h3>Bounty</h3>
+          <p>AI-powered federal grant discovery that syncs opportunities from Grants.gov and scores them against your organization's focus areas using Claude AI. Tracks match status, collects feedback to refine scoring, and pushes won awards downstream to Harbor.</p>
+          <div class="product-links">
+            <a href="https://bounty.docklabs.ai" class="product-link">
+              Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/okeefedaniel/bounty" class="product-link">
+              GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Django 5.2</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Claude AI</span>
+            <span class="tech-tag">Grants.gov API</span>
+            <span class="tech-tag">DRF</span>
+            <span class="tech-tag">Bootstrap 5</span>
+          </div>
+        </div>
+
+        <div class="product-card">
           <div class="product-icon lookout">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"/>
@@ -469,32 +504,62 @@
     <!-- Platform -->
     <div class="section" id="platform">
       <h2>Keel</h2>
-      <p>Keel is the shared platform layer that powers all DockLabs projects &mdash; designed for government requirements.</p>
+      <p>Keel is the shared Django platform library installed across all DockLabs projects. Six modules plus a testing harness &mdash; one codebase for identity, security, compliance, and AI integration.</p>
       <div class="capabilities">
         <div class="capability">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Centralized identity &amp; cross-product roles</span>
+        </div>
+        <div class="capability">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span>Role-based access control</span>
+          <span>Security hardening &amp; brute-force protection</span>
         </div>
         <div class="capability">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          <span>Audit logging &amp; compliance</span>
+          <span>Immutable audit logging</span>
         </div>
         <div class="capability">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          <span>Workflow engine</span>
+          <span>Declarative workflow engine</span>
         </div>
         <div class="capability">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          <span>Notifications</span>
+          <span>Multi-channel notifications (in-app, email, SMS)</span>
         </div>
         <div class="capability">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>Document management</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Shared Claude AI client</span>
+        </div>
+        <div class="capability">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>FOIA workflow &amp; AI pre-classification</span>
+        </div>
+        <div class="capability">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span>File upload scanning (ClamAV)</span>
+        </div>
+        <div class="capability">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          <span>CSP headers &amp; admin IP allowlisting</span>
+        </div>
+        <div class="capability">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          <span>CSV export &amp; document management</span>
         </div>
         <div class="capability">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          <span>REST API patterns</span>
+          <span>Microsoft Entra ID SSO</span>
         </div>
+        <div class="capability">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span>Reusable CI/CD security workflows</span>
+        </div>
+      </div>
+      <div style="margin-top: 20px;">
+        <a href="https://github.com/okeefedaniel/keel" class="product-link">
+          View on GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 

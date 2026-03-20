@@ -2,7 +2,7 @@
 # Compute aggregate stats across DockLabs repos and update index.html
 set -euo pipefail
 
-REPOS="beacon harbor lookout keel docklabs"
+REPOS="beacon harbor bounty lookout keel docklabs"
 BYTES_PER_LINE=40  # conservative estimate for code
 
 total_files=0
