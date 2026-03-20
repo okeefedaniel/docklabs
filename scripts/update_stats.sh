@@ -10,6 +10,7 @@ API="https://api.github.com"
 total_files=0
 total_bytes=0
 project_count=0
+failed_repos=0
 
 fetch() {
   # Retry up to 3 times with backoff
@@ -44,6 +45,9 @@ except: print(0)" 2>/dev/null)
   total_bytes=$((total_bytes + bytes))
 
   project_count=$((project_count + 1))
+  if [ "$files" -eq 0 ]; then
+    failed_repos=$((failed_repos + 1))
+  fi
   echo "  $repo: $files files, $bytes bytes"
 
   sleep 1
@@ -62,9 +66,9 @@ stats_line="${project_count} projects. ${fmt_files} files. ${fmt_lines}+ lines o
 
 echo "Stats: $stats_line"
 
-# Only update if we got meaningful data (guard against API failures)
-if [ "$total_files" -lt 100 ]; then
-  echo "WARNING: File count suspiciously low ($total_files). Skipping update to preserve existing stats."
+# Only update if ALL repos returned data (guard against rate limiting)
+if [ "$failed_repos" -gt 0 ]; then
+  echo "WARNING: $failed_repos repo(s) returned 0 files (likely rate-limited). Skipping update to preserve existing stats."
   exit 0
 fi
 
