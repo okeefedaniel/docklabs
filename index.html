@@ -328,7 +328,7 @@
           </div>
           <div class="tagline">CRM for Economic Development</div>
           <h3>Beacon</h3>
-          <p>A FOIA-aware CRM purpose-built for state economic development agencies. Three-zone architecture separates shared data, state-internal records subject to FOIA, and partner-private information.</p>
+          <p>FOIA-aware CRM for state economic development agencies. Three-zone architecture separates shared, state-internal, and partner-private data. Includes contact and company management with duplicate detection, interaction and pipeline tracking, adoption dashboards, and FOIA export to Admiralty.</p>
           <p>Built for CT DECD and AdvanceCT.</p>
           <div class="product-links">
             <a href="https://beacon.docklabs.ai" class="product-link">
@@ -355,7 +355,7 @@
           </div>
           <div class="tagline">Grants Management</div>
           <h3>Harbor</h3>
-          <p>Enterprise grants management from application intake through disbursement and reporting. Workflow automation, compliance tracking, and audit trails built in from day one.</p>
+          <p>Full-lifecycle grants management from opportunity posting through closeout. AI-powered grant matching, 7-role RBAC, interactive map view, analytics dashboard, document signing with DocuSign integration, federal intake from Bounty, and FOIA export to Admiralty. English/Spanish i18n.</p>
           <div class="product-links">
             <a href="https://harbor.docklabs.ai" class="product-link">
               Live Site
@@ -369,8 +369,11 @@
           <div class="tech-stack">
             <span class="tech-tag">Django 5.2</span>
             <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Claude AI</span>
+            <span class="tech-tag">Mapbox</span>
             <span class="tech-tag">htmx</span>
             <span class="tech-tag">Bootstrap 5</span>
+            <span class="tech-tag">DocuSign</span>
           </div>
         </div>
 
@@ -384,7 +387,7 @@
           </div>
           <div class="tagline">Document Signing</div>
           <h3>Manifest</h3>
-          <p>Document signature workflows for grants and contracts. Route documents for review, collect e-signatures, and maintain audit trails. A standalone product that also integrates as a module of Harbor.</p>
+          <p>Document signature workflows for grants and contracts. Template builder wizard, PDF placement editor, three signature methods plus DocuSign integration, and full audit trails. A standalone product that also integrates as a module of Harbor.</p>
           <div class="product-links">
             <a href="https://manifest.docklabs.ai" class="product-link">
               Live Site
@@ -411,7 +414,7 @@
           </div>
           <div class="tagline">Federal Funds Discovery</div>
           <h3>Bounty</h3>
-          <p>AI-powered federal grant discovery that syncs opportunities from Grants.gov and scores them against your organization's focus areas using Claude AI. Tracks match status, collects feedback to refine scoring, and pushes won awards downstream to Harbor.</p>
+          <p>AI-powered federal grant discovery that syncs opportunities from Grants.gov and scores them against configurable focus areas using Claude AI. Self-registration with admin approval, opportunity tracking and collaboration, scheduled digest emails, and downstream push of won awards to Harbor. FOIA-aware via Keel.</p>
           <div class="product-links">
             <a href="https://bounty.docklabs.ai" class="product-link">
               Live Site
@@ -439,7 +442,7 @@
           </div>
           <div class="tagline">Legislative Intelligence</div>
           <h3>Lookout</h3>
-          <p>AI-powered legislative tracking for CT state government. Automatically syncs bills from the General Assembly, scores relevance using Claude AI against configurable watch profiles, and manages the full testimony lifecycle from drafting through approval workflow.</p>
+          <p>AI-powered legislative tracking for CT state government. Nightly bill sync from the General Assembly, AI relevance scoring, bill-specific AI chat, instant typeahead search, legislator profiles, session calendar, and a three-stage testimony pipeline from drafting through approval workflow. FOIA export to Admiralty.</p>
           <div class="product-links">
             <a href="https://lookout.docklabs.ai" class="product-link">
               Live Site
@@ -447,12 +450,13 @@
             </a>
           </div>
           <div class="tech-stack">
-            <span class="tech-tag">Django 5.1</span>
+            <span class="tech-tag">Django 5.2</span>
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">Claude AI</span>
             <span class="tech-tag">htmx</span>
             <span class="tech-tag">Bootstrap 5</span>
-            <span class="tech-tag">Open States API</span>
+            <span class="tech-tag">FullCalendar</span>
+            <span class="tech-tag">CT CGA API</span>
           </div>
         </div>
 
@@ -466,7 +470,7 @@
           </div>
           <div class="tagline">FOIA Workflow</div>
           <h3>Admiralty</h3>
-          <p>End-to-end FOIA request management for government agencies. Tracks requests from intake through response, catalogs statutory exemptions, and uses Claude AI to flag potential misclassifications during record review. A standalone product but also a module of Beacon.</p>
+          <p>End-to-end FOIA request management for government agencies. Tracks requests from intake through response, catalogs statutory exemptions, and uses Claude AI to flag potential misclassifications during record review. Ingests FOIA-exportable records from Beacon, Harbor, Lookout, and Bounty. A standalone product but also a module of Beacon.</p>
           <div class="product-links">
             <a href="https://admiralty.docklabs.ai" class="product-link">
               Live Site
