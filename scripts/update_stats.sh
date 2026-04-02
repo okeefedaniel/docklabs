@@ -12,11 +12,16 @@ total_bytes=0
 project_count=0
 failed_repos=0
 
+AUTH_HEADER=""
+if [ -n "${GH_TOKEN:-}" ]; then
+  AUTH_HEADER="-H Authorization: token $GH_TOKEN"
+fi
+
 fetch() {
   # Retry up to 3 times with backoff
   local url="$1" attempt=0
   while [ $attempt -lt 3 ]; do
-    result=$(curl -sf "$url" 2>/dev/null) && echo "$result" && return 0
+    result=$(curl -sf $AUTH_HEADER "$url" 2>/dev/null) && echo "$result" && return 0
     attempt=$((attempt + 1))
     sleep $((attempt * 2))
   done

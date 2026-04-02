@@ -27,6 +27,8 @@ jobs:
           python-version: '3.12'
 
       - name: Compute stats
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           chmod +x scripts/update_stats.sh
           bash scripts/update_stats.sh index.html
