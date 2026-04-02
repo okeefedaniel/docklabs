@@ -152,6 +152,10 @@
     .product-icon.lookout svg { color: #c47a0a; }
     .product-icon.admiralty { background: #e6f0f8; }
     .product-icon.admiralty svg { color: #2a5d8a; }
+    .product-icon.yeoman { background: #fef3e8; }
+    .product-icon.yeoman svg { color: #b5651d; }
+    .product-icon.purser { background: #e8eef8; }
+    .product-icon.purser svg { color: #4a5d8a; }
     .product-card h3 {
       font-size: 1.25rem;
       font-weight: 700;
@@ -486,13 +490,68 @@
           </div>
         </div>
 
+        <div class="product-card">
+          <div class="product-icon yeoman">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+              <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+            </svg>
+          </div>
+          <div class="tagline">Scheduling &amp; Invitations</div>
+          <h3>Yeoman</h3>
+          <p>Scheduling and invitation management for a principal's office. Public intake form, 9-state workflow from receipt through scheduling and completion, calendar view with iCal export, map view with geocoded venues, delegation tracking with audit trail, and support for 13 event formats across in-person, virtual, and hybrid modalities.</p>
+          <div class="product-links">
+            <a href="https://yeoman.docklabs.ai" class="product-link">
+              Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Django 5.2</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">htmx</span>
+            <span class="tech-tag">Bootstrap 5</span>
+            <span class="tech-tag">iCal</span>
+            <span class="tech-tag">Geocoding</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon purser">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <div class="tagline">Back-Office FP&amp;A</div>
+          <h3>Purser</h3>
+          <p>Financial close and reporting platform for government program managers. Monthly submission workflows with draft-through-approval lifecycle, auto-pull from Harbor, budget baselines with variance analysis, consolidated close packages routed to Manifest for sign-off, and PDF export for distribution.</p>
+          <div class="product-links">
+            <a href="https://purser.docklabs.ai" class="product-link">
+              Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Django 5.2</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">htmx</span>
+            <span class="tech-tag">Bootstrap 5</span>
+            <span class="tech-tag">Harbor API</span>
+            <span class="tech-tag">Manifest</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- Platform -->
     <div class="section" id="platform">
       <h2>Keel</h2>
-      <p>Keel is the shared Django platform library installed across all DockLabs projects. Six modules plus a testing harness &mdash; one codebase for identity, security, compliance, and AI integration.</p>
+      <p>Keel is the shared Django platform library installed across all eight DockLabs projects. Identity, security, compliance, FOIA, notifications, and AI integration &mdash; one codebase powering every product.</p>
       <div class="capabilities">
         <div class="capability">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
