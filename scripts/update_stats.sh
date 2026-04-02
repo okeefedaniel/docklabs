@@ -48,8 +48,8 @@ try: print(sum(json.load(sys.stdin).values()))
 except: print(0)" 2>/dev/null)
   total_bytes=$((total_bytes + bytes))
 
-  # Don't count docklabs homepage as a "project"
-  if [ "$repo" != "docklabs" ]; then
+  # Don't count docklabs homepage or keel (platform, not a project) in the project count
+  if [ "$repo" != "docklabs" ] && [ "$repo" != "keel" ]; then
     project_count=$((project_count + 1))
   fi
   if [ "$files" -eq 0 ]; then
@@ -59,6 +59,10 @@ except: print(0)" 2>/dev/null)
 
   sleep 1
 done
+
+# Manifest and Admiralty are projects but live inside harbor/beacon repos
+# Count them as separate projects in the display
+project_count=$((project_count + 2))
 
 # Estimate lines of code (round to nearest thousand)
 total_lines=$((total_bytes / BYTES_PER_LINE))
