@@ -3,7 +3,7 @@
 # Uses unauthenticated GitHub API with retry (60 req/hr limit)
 set -euo pipefail
 
-REPOS="beacon harbor bounty lookout keel docklabs yeoman purser"
+REPOS="beacon harbor bounty lookout keel docklabs yeoman purser helm"
 BYTES_PER_LINE=40
 API="https://api.github.com"
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DockLabs — Gov-Tech Software</title>
-  <meta name="description" content="DockLabs builds modular software for government and economic development agencies. Projects include Beacon CRM, Harbor grants management, and Manifest document signing.">
+  <meta name="description" content="DockLabs builds modular software for government and economic development agencies. Ten projects: Beacon CRM, Harbor grants management, Manifest document signing, Bounty federal funds discovery, Lookout legislative tracking, Admiralty FOIA, Yeoman scheduling, Purser FP&amp;A, Helm executive dashboard, and Keel shared platform.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,6 +156,10 @@
     .product-icon.yeoman svg { color: #b5651d; }
     .product-icon.purser { background: #e8eef8; }
     .product-icon.purser svg { color: #4a5d8a; }
+    .product-icon.helm { background: #f8e8e8; }
+    .product-icon.helm svg { color: #8a2a2a; }
+    .product-icon.keel { background: #e8f0f0; }
+    .product-icon.keel svg { color: #2a6a6a; }
     .product-card h3 {
       font-size: 1.25rem;
       font-weight: 700;
@@ -545,13 +549,66 @@
           </div>
         </div>
 
+        <div class="product-card">
+          <div class="product-icon helm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2v20M2 12h20"/>
+              <path d="M12 7l5 5-5 5-5-5z"/>
+            </svg>
+          </div>
+          <div class="tagline">Executive Dashboard</div>
+          <h3>Helm</h3>
+          <p>Unified command dashboard that aggregates data from every DockLabs product. Cross-product bookmarks, cached feed snapshots, configurable morning briefings with severity thresholds, and a real-time activity feed. The single pane of glass for agency leadership.</p>
+          <div class="product-links">
+            <a href="https://helm.docklabs.ai" class="product-link">
+              Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Django 5.2</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">htmx</span>
+            <span class="tech-tag">Bootstrap 5</span>
+            <span class="tech-tag">DRF</span>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon keel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="tagline">Shared Platform</div>
+          <h3>Keel</h3>
+          <p>The shared Django platform library powering every DockLabs product. Centralized identity and SSO (Microsoft Entra ID), security hardening with brute-force protection, immutable audit logging, FOIA workflow with AI pre-classification, multi-channel notifications (in-app, email, SMS via Twilio), declarative workflow engine, ClamAV file scanning, and reusable CI/CD security pipelines.</p>
+          <div class="product-links">
+            <a href="https://keel.docklabs.ai" class="product-link">
+              Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Django 5.2</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Claude AI</span>
+            <span class="tech-tag">Twilio</span>
+            <span class="tech-tag">Resend</span>
+            <span class="tech-tag">ClamAV</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- Platform -->
     <div class="section" id="platform">
-      <h2>Keel</h2>
-      <p>Keel is the shared Django platform library installed across all eight DockLabs projects. Identity, security, compliance, FOIA, notifications, and AI integration &mdash; one codebase powering every product.</p>
+      <h2>The Stack</h2>
+      <p>Every product is built on Keel and shares a common foundation. Ten projects, one platform.</p>
       <div class="capabilities">
         <div class="capability">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
