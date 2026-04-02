@@ -48,7 +48,10 @@ try: print(sum(json.load(sys.stdin).values()))
 except: print(0)" 2>/dev/null)
   total_bytes=$((total_bytes + bytes))
 
-  project_count=$((project_count + 1))
+  # Don't count docklabs homepage as a "project"
+  if [ "$repo" != "docklabs" ]; then
+    project_count=$((project_count + 1))
+  fi
   if [ "$files" -eq 0 ]; then
     failed_repos=$((failed_repos + 1))
   fi
