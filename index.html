@@ -120,15 +120,22 @@
       gap: 24px;
       margin-top: 8px;
     }
+    a.product-card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
     .product-card {
       background: #fafafa;
       border: 1px solid #eee;
       border-radius: 8px;
       padding: 36px;
-      transition: box-shadow 0.2s ease;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
     }
-    .product-card:hover {
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    a.product-card-link:hover .product-card {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border-color: #ccc;
     }
     .product-icon {
       width: 48px;
@@ -328,6 +335,7 @@
       <h2>Projects</h2>
       <div class="products-grid">
 
+        <a href="https://demo-helm.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon helm">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -354,7 +362,9 @@
             <span class="tech-tag">Bootstrap 5</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-beacon.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon beacon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -382,7 +392,9 @@
             <span class="tech-tag">DRF</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-harbor.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon harbor">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -414,7 +426,9 @@
             <span class="tech-tag">DocuSign</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-manifest.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon manifest">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -439,7 +453,9 @@
             <span class="tech-tag">Bootstrap 5</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-bounty.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon bounty">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -468,7 +484,9 @@
             <span class="tech-tag">Bootstrap 5</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-lookout.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon lookout">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -497,7 +515,9 @@
             <span class="tech-tag">CT CGA API</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-admiralty.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon admiralty">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -523,7 +543,9 @@
             <span class="tech-tag">Bootstrap 5</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-yeoman.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon yeoman">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -552,7 +574,9 @@
             <span class="tech-tag">Geocoding</span>
           </div>
         </div>
+        </a>
 
+        <a href="https://demo-purser.docklabs.ai" class="product-card-link">
         <div class="product-card">
           <div class="product-icon purser">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -578,6 +602,7 @@
             <span class="tech-tag">Manifest</span>
           </div>
         </div>
+        </a>
 
 
       </div>
