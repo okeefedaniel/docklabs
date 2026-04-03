@@ -6,10 +6,13 @@ on:
   push:
     branches: [main]
     paths:
+      - 'index.html'
+      - 'ui/**'
       - 'favicon.svg'
       - 'assets/**'
       - 'scripts/**'
       - '.github/workflows/**'
+      - '.htaccess'
   workflow_dispatch:  # manual trigger
 
 permissions:
